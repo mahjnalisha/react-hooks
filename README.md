@@ -37,3 +37,42 @@ user settings
 
 use props if you require to pass it to one step parent child component
 -Always good to use the folder named context for setting up the global variables
+
+
+# UseRef hook
+- always us to access DOM element
+- mutable variable which donesnot cause re-render
+- without using document Dom to get the element
+- get the element using ref attributes
+
+used to manage the state
+works like a statement tool. Manages all states of application in a simple way.
+-accepts two arguments firstone -reducer function initial state
+
+# useLayoutEffect hook
+
+- Before the DOm is printed in the window
+- measure height width
+- runs syncronously
+
+Common use case
+- getting the dimension of the element
+
+How does it works
+- First React calculate the components
+- React prints all the elements
+- Use effect will run
+
+But most of the time we use useEffect Hook will be used
+
+# UseMemo hook
+-appy memorization in react. Memorization - a technique for improving the performance of the code. It is used when the returned value is not going to change
+-stop running unwanted functions on rerendering
+- it can return the value and we can save it for future purposes
+
+# useCallback Hook
+
+- return memoize function
+
+
+# custom Hook

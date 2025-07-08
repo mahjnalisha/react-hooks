@@ -1,24 +1,34 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useMemo, useState } from 'react'
+const expensiveFunction = () => {
+  let countexcess = 0;
+  for (var i = 0; i < 100000; i++) {
+    countexcess = countexcess * 2;
+  }
+  return countexcess;
+}
 
 const App = () => {
-  const [name, setName] = useState("");
-  const inputEle = useRef();
-  const counter = useRef(0);
-  useEffect(() => {
-    counter.current = counter.current + 1;
-  })
-
-  const handleClick = () => {
-    inputEle.current.style.width = "300px";
-    inputEle.current.focus();
+  const [number, setNumber] = useState(0);
+  const [dark, setDark] = useState(false);
+  const memoCalculation = useMemo(() => {
+    return expensiveFunction(number)
+  }, [number]);
+  // const calculation = expensiveFunction(number);
+  const cssStyle = {
+    backgroundColor: dark ? "black" : "white",
+    color: dark ? "white" : "black"
   }
-  return (
-    <div>
-      <input type="text" onChange={(e) => setName(e.target.value)} ref={inputEle} /><br></br>
-      <button onClick={handleClick}>Click Here</button>
-      <h3>Your name is {name} Counter: {counter.current}</h3>
 
-    </div>
+  return (
+    <>
+      <div>here</div>
+      <div style={cssStyle} >
+        <input onChange={(e) => setNumber(e.target.valueAsNumber)} type="number" />
+        <h2>{memoCalculation}</h2>
+        <button onClick={() => setDark(!dark)}>Toggle</button>
+
+      </div >
+    </>
   )
 }
 
