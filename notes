@@ -11,7 +11,7 @@ Use state hooks
 - current value and is the function to update the value
 
 Use Effects
- - it is use to perform side effects in the componsent
+ - It is used to perform side effects in the componsent
  - Side effects are actions which are performed outside world
  - fetching the data in the api
  - updateing the dome

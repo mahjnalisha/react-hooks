@@ -25,3 +25,15 @@ Hooks are the class components
  - timer intervals settimeout
 
 # Usecontext Hooks
+
+global data 
+user settings
+
+3 simple steps
+
+ creating the context
+ providing the context
+ consuming the context
+
+use props if you require to pass it to one step parent child component
+-Always good to use the folder named context for setting up the global variables
