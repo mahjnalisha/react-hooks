@@ -1,6 +1,6 @@
 # REACT HOOKS
-Hooks are the functions to use the functional components in the react
-Hooks are the class components 
+- Hooks are the functions to use the functional components in the react.
+- Hooks are the class components.
 
 # useState Hooks
 - is a function to add state in the functional components . values or variables
