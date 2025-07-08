@@ -7,7 +7,7 @@ React develop the fucntional components to use it as the hooks
 Use state hooks
 - is a function to add state in the functional components . values or variables
 - first import and use it inside the functional component
-- can pass any type of date variable,numbern ,text, array,boolean , object and store it using array destructing
+- can pass any type of date variable,number ,text, array,boolean , object and store it using array destructuring
 - current value and is the function to update the value
 
 Use Effects
