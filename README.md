@@ -80,5 +80,6 @@ But most of the time we use useEffect Hook will be used
 
 - are reusable function
 - own hooks used multiple times for the projects
+- used for api calls
 
 
