@@ -1,34 +1,18 @@
-import React, { useMemo, useState } from 'react'
-const expensiveFunction = () => {
-  let countexcess = 0;
-  for (var i = 0; i < 100000; i++) {
-    countexcess = countexcess * 2;
-  }
-  return countexcess;
-}
+import React, { useEffect, useState } from 'react'
+import useFetch from './customhooks/useFetch'
+
+//fetching data from apis
 
 const App = () => {
-  const [number, setNumber] = useState(0);
-  const [dark, setDark] = useState(false);
-  const memoCalculation = useMemo(() => {
-    return expensiveFunction(number)
-  }, [number]);
-  // const calculation = expensiveFunction(number);
-  const cssStyle = {
-    backgroundColor: dark ? "black" : "white",
-    color: dark ? "white" : "black"
-  }
-
+  const data = useFetch("https://jsonplaceholder.typicode.com/users");
   return (
-    <>
-      <div>here</div>
-      <div style={cssStyle} >
-        <input onChange={(e) => setNumber(e.target.valueAsNumber)} type="number" />
-        <h2>{memoCalculation}</h2>
-        <button onClick={() => setDark(!dark)}>Toggle</button>
-
-      </div >
-    </>
+    <div>
+      {data.map((res) => {
+        return (
+          <h4 key={res.id}>{res.id} . {res.name}</h4>
+        )
+      })}
+    </div>
   )
 }
 

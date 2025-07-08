@@ -66,13 +66,19 @@ How does it works
 But most of the time we use useEffect Hook will be used
 
 # UseMemo hook
--appy memorization in react. Memorization - a technique for improving the performance of the code. It is used when the returned value is not going to change
+-appy memoization in react. Memoization - a technique for improving the performance of the code. It is used when the returned value is not going to change
 -stop running unwanted functions on rerendering
 - it can return the value and we can save it for future purposes
 
 # useCallback Hook
 
 - return memoize function
+- syntax is same as useMemo 
 
 
 # custom Hook
+
+- are reusable function
+- own hooks used multiple times for the projects
+
+
